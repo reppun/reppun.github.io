@@ -1,3 +1,37 @@
 body {
     background-color: white;
+    font-family: 'Georgia', serif;
   }
+
+  .accent1 {
+    background-color: #fce4de;
+  }
+
+  .accent1-2 {
+    background-color: #f2c8bd;
+  }
+
+  .accent1-3 {
+    background-color: #e8afa0;
+  }
+
+  .accent2 {
+    background-color: #875b51;
+    --bs-btn-hover-bg: #5c3c34;
+    --bs-btn-bg: #875b51;
+    --bs-btn-hover-color: white;
+    color: white;
+  }
+
+  .accent3 {
+    background:#d49d90;
+    opacity: 0.9;
+  }
+
+  .pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
