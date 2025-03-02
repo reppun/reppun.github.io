@@ -87,39 +87,6 @@
                         <script src='kurssit.js'></script>
                     </div>
 
-                    <div id="vastaus2">
-                        <script>
-                            fetch('https://reppun.github.io/kurssit.json')
-                                // Muunnetaan vastaus JSON muotoon  
-                                .then(function (response) {
-                                    return response.json();
-                                })
-                                //Käsitellään muunnettu (eli JSON muotoinen) vastaus
-                                // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
-                                .then(function (responseJson) {
-                                    kerro2(responseJson);
-                                })
-                                // Jos tuli jokin virhe
-                                .catch(function (error) {
-                                    document.getElementById("vastaus2").innerHTML = "<p>Tietoa ei pystytä hakemaan, mutta miksi? Hmm...</p>";
-                                })
-
-                            function kerro2(data) {
-                                var teksti = "";
-                                teksti = "<p>Tekniikat</p><br />";
-
-                                for (var i = 0; i < data.length; i++) {
-                                    teksti = teksti + "<p> Aihe: " + data[i].tekniikat.aihe + "</p>";
-                                    teksti = teksti + "<p> Linkki: " + data[i].tekniikat.linkki + "</p>";
-                                }
-
-                                document.getElementById("vastaus2").innerHTML = teksti;
-
-                            }
-
-                        </script>
-                    </div>
-
                 </div>
             </div>
         </div>

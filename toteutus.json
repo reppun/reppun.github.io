@@ -1,15 +1,16 @@
 {
     "nimi": "Digitekniikat",
+
     "osallistujat": [{
-        "nimi" : "Maija Maijanen",
+        "nimi" : "Maija Maijanen"
     },{
-        "nimi" : "Petteri Pikkunen",
+        "nimi" : "Petteri Pikkunen"
     },{
-        "nimi" : "Mikko Mallikas",
-    }{
-        "nimi" : "Kaisa Kaisanen",
-    }{
-        "nimi" : "Ville Vallaton",
+        "nimi" : "Mikko Mallikas"
+    },{
+        "nimi" : "Kaisa Kaisanen"
+    },{
+        "nimi" : "Ville Vallaton"
     }
     ],
 

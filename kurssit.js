@@ -31,10 +31,23 @@ function kerro(data) {
 
     teksti = teksti + "<p>Aiheet:</p>";
 
-        for (var i = 0; i < data.length; i++) {
-            teksti = teksti + "<p> Aihe: " + data[i].sisalto + "<br>";
-        }   
-         
+    teksti = teksti + data.sisalto + "</p>";
+
+    // En saanut tätä for looppia toimimaan.
+    //for (var i = 0; i < data.length; i++) {
+    //    teksti = teksti + "<p> Aihe: " + data[i].sisalto + "<br>";
+    //}
+
+    teksti = teksti + "<p>Tekniikat</p><br />";
+
+    teksti = teksti + data.tekniikat + "</p>";
+
+    // En saanut tätä for looppia toimimaan.
+    //for (var i = 0; i < data.length; i++) {
+    //    teksti = teksti + "<p> Aihe: " + data[i].tekniikat.aihe + "</p>";
+    //    teksti = teksti + "<p> Linkki: " + data[i].tekniikat.linkki + "</p>";
+    //}
+
 
     document.getElementById("vastaus").innerHTML = teksti;
 
