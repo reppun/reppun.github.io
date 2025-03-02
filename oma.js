@@ -1,4 +1,4 @@
-fetch('Tähän edellisessä kohdassa kopioimasi linkki')
+fetch('https://github.com/reppun/reppun.github.io/blob/main/kurssit.json')
 
 
 // Muunnetaan vastaus JSON muotoon  
