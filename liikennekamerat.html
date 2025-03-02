@@ -88,15 +88,12 @@
                             // Muunnetaan vastaus JSON muotoon
                             .then(function (response) {
                                 return response.json();
-
                             })
-
                             // Käsitellään muunnettu (eli JSON muotoinen) vastaus
                             .then(function (responseJson) {
                                 // Kutsutaan funktiota ja välitetään sille json-vastaus 
                                 kamerat(responseJson)
                             })
-
                             // Jos tuli jokin virhe
                             .catch(function (error) {
                                 document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan </p>" + error;
@@ -105,12 +102,22 @@
                         function kamerat(data) {
                             var teksti = "";
                             teksti = "<h2>Autolla tampereelle</h2><br />";
-
+                            teksti = teksti + "<p>Päivitetty: " + data.properties.dataUpdatedTime + "</p>";
 
                             for (var i = 0; i < data.length; i++) {
-                                teksti = teksti + "<p>" + data[i].properties.dataUpdatedTime + "</p>";
-                                teksti = teksti + "<p><img src=" + data[i].presets.imageUrl + "></p>";
+
+                                for (var j = 0; j < data[i].presets.length; j++) {
+                                    teksti = teksti + "<p><img src=" + data[i].presets[j].imageUrl + "></p>";
+                                }
                             }
+
+                            const json = '{"result":true, "count":42}';
+                            const obj = JSON.parse(json);
+                            const teksti = obj.count + ' & ' + obj.result;
+
+                            const txt = '{"name":"John", "age":30, "city":"New York"}'
+                            const obj = JSON.parse(txt);
+                            document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
 
                             document.getElementById("vastaus").innerHTML = teksti;
                         }
@@ -121,7 +128,7 @@
         </div>
 
     </div>
-    
+
 </body>
 
 </html>

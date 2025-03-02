@@ -6,6 +6,14 @@ function kerro(data) {
     teksti = teksti + "<p>" + "<b>" + "Osallistujat" + "</b>" + "<br>"
         + data.osallistujat + "<br>";
 
+        const json = '{data.osallistujat}';
+        const obj = JSON.parse(json);
+        const teksti = obj.nimi + '<br />';
+
+        const txt = '{"name":"John", "age":30, "city":"New York"}'
+        const obj = JSON.parse(txt);
+        document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;    
+
     teksti = teksti + "<p>" + "<b>" + "Toteutuksen päivämäärät" + "</b>" + "<br>"
         + data.pvm.alku + "-" + data.pvm.loppu + "</p>";
 

@@ -82,13 +82,50 @@
         <div class="row">
             <div class="accent1-2 rounded-4 m-1 p-4">
                 <div id="vastaus">
-                    <script src='oma.js'></script>
+                    <script>
+                        fetch('https://rata.digitraffic.fi/api/v1/live-trains/station/HKI?departing_trains=100&include_nonstopping=false')
+                            // Muunnetaan vastaus JSON muotoon
+                            .then(function (response) {
+                                return response.json();
+
+                            })
+
+                            // Käsitellään muunnettu (eli JSON muotoinen) vastaus
+                            .then(function (responseJson) {
+                                // Kutsutaan funktiota ja välitetään sille json-vastaus 
+                                tapahtumat(responseJson)
+                            })
+
+                            // Jos tuli jokin virhe
+                            .catch(function (error) {
+                                document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan </p>" + error;
+                            })
+
+                        function tapahtumat(data) {
+                            var teksti = "";
+                            teksti = "<h2>Tampereella tapahtuu</h2><br />";
+
+                            for (var i = 0; i < data.length; i++) {
+                                teksti = teksti + "<h3>" + data[i].title + "</h3>";
+                                teksti = teksti + "<p>" + data[i].description + "</p>";
+                                teksti = teksti + "<p> <a href=" + data[i].url + ">" + data[i].url + "</a></p>";
+                            }
+
+                            for (var i = 0; i < data.length; i++)
+
+                                // ja toinen sisempi timeTableRows - taulukon
+
+                                for (var j = 0; j < data[i].timeTableRows.length; j++)
+
+                                    document.getElementById("vastaus").innerHTML = teksti;
+                        }
+                    </script>
                 </div>
             </div>
         </div>
 
     </div>
-    
+
 </body>
 
 </html>

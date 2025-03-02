@@ -1,10 +1,23 @@
 {
     "nimi": "Digitekniikat",
-    "osallistujat": ["Maija Maijanen", "Petteri Pikkunen", "Mikko Mallikas", "Kaisa Kaisanen", "Ville Vallaton"],
+    "osallistujat": [{
+        "nimi" : "Maija Maijanen",
+    },{
+        "nimi" : "Petteri Pikkunen",
+    },{
+        "nimi" : "Mikko Mallikas",
+    }{
+        "nimi" : "Kaisa Kaisanen",
+    }{
+        "nimi" : "Ville Vallaton",
+    }
+    ],
+
     "pvm": {
         "alku": "2025-01-13",
         "loppu": "2025-03-14"
     },
+    
     "kesto": "8 viikkoa",
-    "kuva": "sweater3.jpg"
+    "kuva": "https://jaakkola.github.io/json/digi.JPG"
 }

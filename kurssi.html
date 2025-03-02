@@ -73,53 +73,62 @@
 
         <div class="row">
             <div class="col-sm-12">
-
                 <h1>Repun JSON testisivu</h1>
                 <br /><br />
             </div>
         </div>
 
-        <div class="row">
-            <div class="accent1-2 rounded-4 m-1 p-4">
+        <!--Javascript ja JSON-->
+        <div class="row align-items-center" id="kolumnit">
+            <div class="col-md-6">
+                <div class="accent1 rounded-4 m-1 p-4">
 
-                <!--Javascript ja JSON-->
-                <div id="vastaus">
-                    <script src='kurssit.js'></script>
+                    <div id="vastaus">
+                        <script src='kurssit.js'></script>
+                    </div>
+
                 </div>
+            </div>
+            <div class="col-md-6">
+                <div class="accent1 rounded-4 m-1 p-4">
 
-                <!--Toinen javascript, sillä en saanut tekniikoita parsella toimimaan?-->
-                <div id="vastaus2">
-                    <script>
-                        var tekniikat = [
-                            {
-                                "aihe": "low-code",
-                                "linkki": "https://www.weebly.com/"
-                            },
-                            {
-                                "aihe": "wordpress",
-                                "linkki": "https://https://wordpress.com/"
-                            },
-                            {
-                                "aihe": "bootstrap",
-                                "linkki": "https://getbootstrap.com/"
-                            },
-                            {
-                                "aihe": "JSON",
-                                "linkki": "https://www.json.org/json-en.html"
-                            }
-                        ];
+                    <div id="vastaus2">
+                        <script>
+                            fetch('https://reppun.github.io/kurssit.json')
+                                // Muunnetaan vastaus JSON muotoon  
+                                .then(function (response) {
+                                    return response.json();
+                                })
+                                //Käsitellään muunnettu (eli JSON muotoinen) vastaus
+                                // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
+                                .then(function (responseJson) {
+                                    kerro2(responseJson);
+                                })
+                                // Jos tuli jokin virhe
+                                .catch(function (error) {
+                                    document.getElementById("vastaus2").innerHTML = "<p>Tietoa ei pystytä hakemaan, mutta miksi? Hmm...</p>";
+                                })
 
-                        var teksti = "";
-                        for (var i = 0; i < tekniikat.length; i++) {
-                            teksti = teksti + "<p> Aihe: " + tekniikat[i].aihe + "<br>";
-                            teksti = teksti + "<p> Linkki: " + tekniikat[i].linkki + "<br>";
-                        }
-                        document.getElementById("vastaus2").innerHTML = teksti;
-                    </script>
+                            function kerro2(data) {
+                                var teksti = "";
+                                teksti = "<p>Tekniikat</p><br />";
+
+                                for (var i = 0; i < data.length; i++) {
+                                    teksti = teksti + "<p> Aihe: " + data[i].tekniikat.aihe + "</p>";
+                                    teksti = teksti + "<p> Linkki: " + data[i].tekniikat.linkki + "</p>";
+                                }
+
+                                document.getElementById("vastaus2").innerHTML = teksti;
+
+                        </script>
+                    </div>
+
                 </div>
-
             </div>
         </div>
+
+    </div>
+    </div>
 
     </div>
 
