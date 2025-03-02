@@ -35,7 +35,7 @@ function kerro(data) {
 
     // En saanut tätä for looppia toimimaan.
     for (var i = 0; i < data.length; i++) {
-        teksti = teksti + "<p> Aihe: " + data[i].sisalto + "<br>";
+        teksti = teksti + "<p>Aihe: " + data[i].sisalto + "<br>";
     }
 
     teksti = teksti + "<p>Tekniikat</p>";
@@ -44,8 +44,8 @@ function kerro(data) {
 
     // En saanut tätä for looppia toimimaan.
     for (var i = 0; i < data.length; i++) {
-        teksti = teksti + "<p> Aihe: " + data[i].tekniikat.aihe + "</p>";
-        teksti = teksti + "<p> Linkki: " + data[i].tekniikat.linkki + "</p>";
+        teksti = teksti + "<p>Aihe: " + data[i].tekniikat.aihe + "</p>";
+        teksti = teksti + "<p>Linkki: " + data[i].tekniikat.linkki + "</p>";
     }
 
 

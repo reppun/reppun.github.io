@@ -87,15 +87,12 @@
                             // Muunnetaan vastaus JSON muotoon
                             .then(function (response) {
                                 return response.json();
-
                             })
-
                             // Käsitellään muunnettu (eli JSON muotoinen) vastaus
                             .then(function (responseJson) {
                                 // Kutsutaan funktiota ja välitetään sille json-vastaus 
                                 tapahtumat(responseJson)
                             })
-
                             // Jos tuli jokin virhe
                             .catch(function (error) {
                                 document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan </p>" + error;
@@ -111,12 +108,25 @@
                                 for (var j = 0; j < data[i].timeTableRows.length; j++) {
 
                                     if (data[i].timeTableRows[j].stationShortCode == "TPE") {
-                                        document.getElementById("vastaus").innerHTML = teksti;
+                                        teksti = teksti + "<p><img src=" + data[i].presets[j].imageUrl + "></p>"
                                     };
 
                                 }
 
                             }
+
+                            data[i].timeTableRows[0].stationShortCode
+
+                            var vika = data[i].timeTableRows.length – 1
+
+                            data[i].timeTableRows[vika].stationShortCode
+
+                            var pvm = data[i].timeTableRows[j].scheduledTime;
+
+                            var aika = pvm.substr(0, 10) + " kello: " + pvm.substr(11, 5);
+
+                            document.getElementById("vastaus").innerHTML = teksti;
+
                         }
                     </script>
                 </div>
