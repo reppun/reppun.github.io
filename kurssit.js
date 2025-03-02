@@ -38,7 +38,7 @@ function kerro(data) {
     //    teksti = teksti + "<p> Aihe: " + data[i].sisalto + "<br>";
     //}
 
-    teksti = teksti + "<p>Tekniikat</p><br />";
+    teksti = teksti + "<p>Tekniikat</p>";
 
     teksti = teksti + data.tekniikat + "</p>";
 
