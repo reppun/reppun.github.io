@@ -12,7 +12,7 @@ function kerro(data) {
     teksti = teksti + "<p>" + "<b>" + "Kesto" + "</b>" + "<br>"
         + data.kesto + "</p>";
 
-    teksti = teksti + "<br>" + data.kuva ;   
+    teksti = teksti + "<p><img src=https://reppun.github.io/" + data.kuva + "></p>";
 
     document.getElementById("vastaus").innerHTML = teksti;
 
