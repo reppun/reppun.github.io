@@ -104,12 +104,12 @@
 
                         function kamerat(data) {
                             var teksti = "";
-                            teksti = "<h2>Autolla tampereelle</h2>";
+                            teksti = "<h2>Autolla tampereelle</h2><br />";
+
 
                             for (var i = 0; i < data.length; i++) {
-                                teksti = teksti + "<h3>" + data[i].properties.dataUpdatedTime + "</h3>";
-                                teksti = teksti + "<p>" + data[i].description + "</p>";
-                                teksti = teksti + "<p> <a href=" + data[i].url + ">" + data[i].url + "</a></p>";
+                                teksti = teksti + "<p>" + data[i].properties.dataUpdatedTime + "</p>";
+                                teksti = teksti + "<p><img src=" + data[i].presets.imageUrl + "></p>";
                             }
 
                             document.getElementById("vastaus").innerHTML = teksti;
