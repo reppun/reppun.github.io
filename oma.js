@@ -6,9 +6,9 @@ function kerro(data) {
         + data.kuvaus + "<br>";
 
     teksti = teksti + "<p>" + "<b>" + "Opintojakso" + "</b>" + "<br>"
-        + data.opintojakso.nimi + "</p>"
-        + data.opintojakso.tunnus + "</p>"
-        + data.opintojakso.opintopisteet + "</p>";
+        + "Nimi: " + data.opintojakso.nimi + "<br>"
+        + "Tunnus: " + data.opintojakso.tunnus + "<br>"
+        + "Opintopisteet: " + data.opintojakso.opintopisteet + "</p>";
 
     teksti = teksti + "<p>" + "<b>" + "Sisältö" + "</b>" + "<br>"
         + data.sisalto + "</p>";
@@ -17,12 +17,6 @@ function kerro(data) {
         + data.tekniikat + "</p>";
 
     document.getElementById("vastaus").innerHTML = teksti;
-
-    const json = '{"result":true, "count":42}';
-    const obj = JSON.parse(json);    
-    const teksti = obj.count + ' & ' + obj.result;
-   
-    document.getElementById("kappale1").innerText = teksti;
 }
 
 fetch('https://reppun.github.io/kurssit.json')
