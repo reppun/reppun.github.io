@@ -1,9 +1,11 @@
 function kerro(data) {
     var teksti = "";
-    teksti = "<h1>" + data.otsikko + "</h1>";
-    teksti = teksti + "<p>" + "<b>" + "Yhteysteidot" + "</b>" + "<br>"
+    teksti = "<h2>" + data.otsikko + "</h2>";
+    teksti = teksti + "<p>" + "<b>" + "Sivun tarkoitus" + "</b>" + "<br>"
         + data.kuvaus + "<br>"
-        + data.opintojakso + "</p>";
+        + data.opintojakso.nimi + "</p>"
+        + data.opintojakso.tunnus + "</p>"
+        + data.opintojakso.opintopisteet + "</p>";
     document.getElementById("vastaus").innerHTML = teksti;
 }
 
