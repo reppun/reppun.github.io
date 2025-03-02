@@ -11,10 +11,10 @@ function kerro(data) {
         + data.opintojakso.opintopisteet + "</p>";
 
     teksti = teksti + "<p>" + "<b>" + "Sisältö" + "</b>" + "<br>"
-        + data.sisalto.0 + "</p>"
-        + data.sisalto.1 + "</p>"
-        + data.sisalto.2 + "</p>"
-        + data.sisalto.3 + "</p>";
+        + data.sisalto + "</p>"
+        + data.sisalto + "</p>"
+        + data.sisalto + "</p>"
+        + data.sisalto + "</p>";
 
     teksti = teksti + "<p>" + "<b>" + "Tekniikat" + "</b>" + "<br>"
         + data.tekniikat + "</p>";
