@@ -1,37 +1,30 @@
+function kerro(data) {
+    var teksti = "";
+    teksti = "<h1>" + data.yritys + "</h1>";
+    teksti = teksti + "<p>" + "<b>" + "Yhteysteidot" + "</b>" + "<br>"
+        + data.yhteystiedot.puhelin + "<br>"
+        + data.yhteystiedot.email + "</p>";
+    document.getElementById("vastaus").innerHTML = teksti;
+}
+
 fetch('https://github.com/reppun/reppun.github.io/blob/main/kurssit.json')
 
 
-// Muunnetaan vastaus JSON muotoon  
+    // Muunnetaan vastaus JSON muotoon  
 
-.then(function (response) {
-
-return response.json();
-
-})
+    .then(function (response) {
+        return response.json();
+    })
 
 
-//Käsitellään muunnettu (eli JSON muotoinen) vastaus
-
-// Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
-
-
-
-
+    //Käsitellään muunnettu (eli JSON muotoinen) vastaus
+    // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
+    .then(function (responseJson) {
+        kerro(responseJson);
+    })
 
 
-.then(function (responseJson) {
-
-kerro(responseJson);
-
-})
-
-
-// Jos tuli jokin virhe
-
-
-.catch(function (error) {
-
-document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
-
-
-})
+    // Jos tuli jokin virhe
+    .catch(function (error) {
+        document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+    })
