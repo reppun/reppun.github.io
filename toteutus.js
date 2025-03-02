@@ -7,7 +7,7 @@ function kerro(data) {
         + data.osallistujat + "<br>";
 
     teksti = teksti + "<p>" + "<b>" + "Toteutuksen päivämäärät" + "</b>" + "<br>"
-        + data.pvm.alku + "-" + data.pv.loppu + "</p>";
+        + data.pvm.alku + "-" + data.pvm.loppu + "</p>";
 
     teksti = teksti + "<p>" + "<b>" + "Kesto" + "</b>" + "<br>"
         + data.kesto + "</p>";
