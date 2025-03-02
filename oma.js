@@ -11,19 +11,18 @@ function kerro(data) {
         + data.opintojakso.opintopisteet + "</p>";
 
     teksti = teksti + "<p>" + "<b>" + "Sisältö" + "</b>" + "<br>"
-        + data.sisalto + "</p>"
-        + data.sisalto + "</p>"
-        + data.sisalto + "</p>"
         + data.sisalto + "</p>";
 
     teksti = teksti + "<p>" + "<b>" + "Tekniikat" + "</b>" + "<br>"
         + data.tekniikat + "</p>";
 
-        const json = '{"result":true, "count":42}';
-        const obj = JSON.parse(json);    
-        const teksti = obj.count + ' & ' + obj.result;    
-
     document.getElementById("vastaus").innerHTML = teksti;
+
+    const json = '{"result":true, "count":42}';
+    const obj = JSON.parse(json);    
+    const teksti = obj.count + ' & ' + obj.result;
+   
+    document.getElementById("kappale1").innerText = teksti;
 }
 
 fetch('https://reppun.github.io/kurssit.json')
