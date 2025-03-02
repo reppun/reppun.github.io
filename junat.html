@@ -103,21 +103,20 @@
 
                         function tapahtumat(data) {
                             var teksti = "";
-                            teksti = "<h2>Tampereella tapahtuu</h2><br />";
+                            teksti = "<h2>Junia menee</h2><br />";
 
+                            //En saanut tätä for looppia toimimaan.
                             for (var i = 0; i < data.length; i++) {
-                                teksti = teksti + "<h3>" + data[i].title + "</h3>";
-                                teksti = teksti + "<p>" + data[i].description + "</p>";
-                                teksti = teksti + "<p> <a href=" + data[i].url + ">" + data[i].url + "</a></p>";
+
+                                for (var j = 0; j < data[i].timeTableRows.length; j++) {
+
+                                    if (data[i].timeTableRows[j].stationShortCode == "TPE") {
+                                        document.getElementById("vastaus").innerHTML = teksti;
+                                    };
+
+                                }
+
                             }
-
-                            for (var i = 0; i < data.length; i++)
-
-                                // ja toinen sisempi timeTableRows - taulukon
-
-                                for (var j = 0; j < data[i].timeTableRows.length; j++)
-
-                                    document.getElementById("vastaus").innerHTML = teksti;
                         }
                     </script>
                 </div>

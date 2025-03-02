@@ -23,10 +23,10 @@ function kerro(data) {
     teksti = teksti + "<p>" + "<b>" + "Osallistujat" + "</b>" + "<br>"
         + data.osallistujat + "<br>";
 
-        // En saanut tätä for-looppia toimimaan.
-        //for (var i = 0; i < data.length; i++) {
-        //    teksti = teksti + "<p>" + data[i].osallistujat.nimi + ", </p>";
-        //}
+    // En saanut tätä for-looppia toimimaan.
+    for (var i = 0; i < data.length; i++) {
+        teksti = teksti + "<p>" + data[i].osallistujat.nimi + ", </p>";
+    }
 
     teksti = teksti + "<p>" + "<b>" + "Toteutuksen päivämäärät" + "</b>" + "<br>"
         + data.pvm.alku + "-" + data.pvm.loppu + data.pvm.vuosi + "</p>";

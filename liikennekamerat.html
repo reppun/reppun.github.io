@@ -102,8 +102,11 @@
                         function kamerat(data) {
                             var teksti = "";
                             teksti = "<h2>Autolla tampereelle</h2><br />";
+                            teksti = teksti + "<p>" + data.properties.name + "</p>";
                             teksti = teksti + "<p>Päivitetty: " + data.properties.dataUpdatedTime + "</p>";
+                            teksti = teksti + "<p>" + data.properties + "</p>";
 
+                            //En saanut tätä for looppia toimimaan.
                             for (var i = 0; i < data.length; i++) {
 
                                 for (var j = 0; j < data[i].presets.length; j++) {
