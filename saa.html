@@ -112,7 +112,8 @@
                                 teksti = teksti + "<p>Sää: " + data.weather[0].description + "</p>";
                                 teksti = teksti + "<p>Lämpötila: " + data.main.temp + " °C</p>";
                                 teksti = teksti + "<p>Tuulen nopeus: " + data.wind.speed + " m/s</p>";
-                                teksti = teksti + "<img src={" + data.weather[0].icon + "} />";
+                                teksti = teksti + "<p><img src=https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png></p>";
+                                
 
                                 document.getElementById("vastaus").innerHTML = teksti;
                             }
@@ -153,7 +154,7 @@
                                 teksti = teksti + "<p>Sää: " + data.weather[0].description + "</p>";
                                 teksti = teksti + "<p>Lämpötila: " + data.main.temp + " °C</p>";
                                 teksti = teksti + "<p>Tuulen nopeus: " + data.wind.speed + " m/s</p>";
-                                teksti = teksti + "<img src=${" + data.weather[0].icon + "} />";
+                                teksti = teksti + "<p><img src=https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png></p>";
 
                             document.getElementById("vastaus2").innerHTML = teksti;
                             }
