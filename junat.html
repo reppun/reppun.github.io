@@ -108,24 +108,26 @@
                                 for (var j = 0; j < data[i].timeTableRows.length; j++) {
 
                                     if (data[i].timeTableRows[j].stationShortCode == "TPE") {
-                                        teksti = teksti + "<p><img src=" + data[i].presets[j].imageUrl + "></p>"
+                                        teksti = teksti + "<p>Juna kulkee: " + data[i].timeTableRows[j].stationShortCode + "</p>"
                                     };
 
                                 }
 
                             }
 
-                            data[i].timeTableRows[0].stationShortCode
+                            //En ymmärrä tehtävänantoa. 
 
-                            var vika = data[i].timeTableRows.length – 1
+                            //data[i].timeTableRows[0].stationShortCode
 
-                            data[i].timeTableRows[vika].stationShortCode
+                            //var vika = data[i].timeTableRows.length
 
-                            var pvm = data[i].timeTableRows[j].scheduledTime;
+                            //data[i].timeTableRows[vika].stationShortCode
 
-                            var aika = pvm.substr(0, 10) + " kello: " + pvm.substr(11, 5);
+                            //var pvm = data[i].timeTableRows[j].scheduledTime;
 
-                            document.getElementById("vastaus").innerHTML = teksti;
+                            //var aika = pvm.substr(0, 10) + " kello: " + pvm.substr(11, 5);
+
+                            //document.getElementById("vastaus").innerHTML = teksti;
 
                         }
                     </script>
