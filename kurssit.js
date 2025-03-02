@@ -5,6 +5,8 @@ function kerro(data) {
     teksti = teksti + "<p>" + "<b>" + "Sivun tarkoitus" + "</b>" + "<br>"
         + data.kuvaus + "<br>";
 
+    teksti = teksti + "<p><img src=" + data.kuva + "></p>";
+
     teksti = teksti + "<p>" + "<b>" + "Opintojakso" + "</b>" + "<br>"
         + "Nimi: " + data.opintojakso.nimi + "<br>"
         + "Tunnus: " + data.opintojakso.tunnus + "<br>"
