@@ -9,13 +9,10 @@ function kerro(data) {
 
 fetch('https://reppun.github.io/kurssit.json')
 
-
     // Muunnetaan vastaus JSON muotoon  
-
     .then(function (response) {
         return response.json();
     })
-
 
     //Käsitellään muunnettu (eli JSON muotoinen) vastaus
     // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
@@ -23,8 +20,7 @@ fetch('https://reppun.github.io/kurssit.json')
         kerro(responseJson);
     })
 
-
     // Jos tuli jokin virhe
     .catch(function (error) {
-        document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+        document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan, mutta miksi? Hmm...</p>";
     })
