@@ -29,12 +29,12 @@ function kerro(data) {
         + "Tunnus: " + data.opintojakso.tunnus + "<br>"
         + "Opintopisteet: " + data.opintojakso.opintopisteet + "</p>";
 
-    teksti = teksti + "<p>" + "<b>" + "Sisältö" + "</b>" + "<br>"
-        + data.sisalto + ",</p>";
+    teksti = teksti + "<p>Aiheet:</p>";
 
         for (var i = 0; i < data.length; i++) {
             teksti = teksti + "<p> Aihe: " + data[i].sisalto + "<br>";
-        }    
+        }   
+         
 
     document.getElementById("vastaus").innerHTML = teksti;
 
