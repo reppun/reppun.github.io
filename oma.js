@@ -16,10 +16,6 @@ function kerro(data) {
     teksti = teksti + "<p>" + "<b>" + "Tekniikat" + "</b>" + "<br>"
         + data.tekniikat + "</p>";
 
-        const json = '{"result":true, "count":42}';
-        const obj = JSON.parse(json);    
-        const teksti = obj.count + ' & ' + obj.result;    
-
     document.getElementById("vastaus").innerHTML = teksti;
 
 
