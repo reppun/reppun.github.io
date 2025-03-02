@@ -9,6 +9,10 @@
     font-family: 'Georgia', serif;
   }
 
+  a {
+    color:#5c3c34;
+  }
+
   .accent1 {
     background-color: #fce4de;
   }
