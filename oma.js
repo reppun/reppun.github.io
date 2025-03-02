@@ -7,7 +7,7 @@ function kerro(data) {
     document.getElementById("vastaus").innerHTML = teksti;
 }
 
-fetch('https://github.com/reppun/reppun.github.io/blob/main/kurssit.json')
+fetch('https://reppun.github.io/kurssit.json')
 
 
     // Muunnetaan vastaus JSON muotoon  
