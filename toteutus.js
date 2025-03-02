@@ -18,6 +18,8 @@ function kerro(data) {
 
     teksti = "<h2>" + data.nimi + "</h2>";
 
+    teksti = teksti + "<p>" + "Osallistujien määrä: " + data.maara + "</p>";
+
     teksti = teksti + "<p>" + "<b>" + "Osallistujat" + "</b>" + "<br>"
         + data.osallistujat + "<br>";
 
