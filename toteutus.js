@@ -13,8 +13,6 @@ function kerro(data) {
         + data.kesto + "</p>";
 
     teksti = teksti + "<br>" + data.kuva ;   
-    
-    
 
     document.getElementById("vastaus").innerHTML = teksti;
 
