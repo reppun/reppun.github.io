@@ -1,9 +1,9 @@
 function kerro(data) {
     var teksti = "";
-    teksti = "<h1>" + data.yritys + "</h1>";
+    teksti = "<h1>" + data.otsikko + "</h1>";
     teksti = teksti + "<p>" + "<b>" + "Yhteysteidot" + "</b>" + "<br>"
-        + data.yhteystiedot.puhelin + "<br>"
-        + data.yhteystiedot.email + "</p>";
+        + data.kuvaus + "<br>"
+        + data.opintojakso + "</p>";
     document.getElementById("vastaus").innerHTML = teksti;
 }
 
