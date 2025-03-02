@@ -1,11 +1,24 @@
 function kerro(data) {
     var teksti = "";
     teksti = "<h2>" + data.otsikko + "</h2>";
+
     teksti = teksti + "<p>" + "<b>" + "Sivun tarkoitus" + "</b>" + "<br>"
-        + data.kuvaus + "<br>"
+        + data.kuvaus + "<br>";
+
+    teksti = teksti + "<p>" + "<b>" + "Opintojakso" + "</b>" + "<br>"
         + data.opintojakso.nimi + "</p>"
         + data.opintojakso.tunnus + "</p>"
         + data.opintojakso.opintopisteet + "</p>";
+
+    teksti = teksti + "<p>" + "<b>" + "Sisältö" + "</b>" + "<br>"
+        + data.sisalto.0 + "</p>"
+        + data.sisalto.1 + "</p>"
+        + data.sisalto.2 + "</p>"
+        + data.sisalto.3 + "</p>";
+
+    teksti = teksti + "<p>" + "<b>" + "Tekniikat" + "</b>" + "<br>"
+        + data.tekniikat + "</p>";
+
     document.getElementById("vastaus").innerHTML = teksti;
 }
 
