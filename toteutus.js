@@ -12,6 +12,10 @@ function kerro(data) {
     teksti = teksti + "<p>" + "<b>" + "Kesto" + "</b>" + "<br>"
         + data.kesto + "</p>";
 
+    teksti = teksti + "<br>" + data.kuva ;   
+    
+    
+
     document.getElementById("vastaus").innerHTML = teksti;
 
 }

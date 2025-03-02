@@ -81,9 +81,43 @@
 
         <div class="row">
             <div class="accent1-2 rounded-4 m-1 p-4">
+
+                <!--Javascript ja JSON-->
                 <div id="vastaus">
-                    <script src='oma.js'></script>
+                    <script src='kurssit.js'></script>
                 </div>
+
+                <!--Toinen javascript, sillä en saanut tekniikoita parsella toimimaan?-->
+                <div id="vastaus2">
+                    <script>
+                        var tekniikat = [
+                            {
+                                "aihe": "low-code",
+                                "linkki": "https://www.weebly.com/"
+                            },
+                            {
+                                "aihe": "wordpress",
+                                "linkki": "https://https://wordpress.com/"
+                            },
+                            {
+                                "aihe": "bootstrap",
+                                "linkki": "https://getbootstrap.com/"
+                            },
+                            {
+                                "aihe": "JSON",
+                                "linkki": "https://www.json.org/json-en.html"
+                            }
+                        ];
+
+                        var teksti = "";
+                        for (var i = 0; i < tekniikat.length; i++) {
+                            teksti = teksti + "<p> Aihe: " + tekniikat[i].aihe + "<br>";
+                            teksti = teksti + "<p> Linkki: " + tekniikat[i].linkki + "<br>";
+                        }
+                        document.getElementById("vastaus2").innerHTML = teksti;
+                    </script>
+                </div>
+
             </div>
         </div>
 

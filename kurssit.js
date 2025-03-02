@@ -13,11 +13,7 @@ function kerro(data) {
     teksti = teksti + "<p>" + "<b>" + "Sisältö" + "</b>" + "<br>"
         + data.sisalto + "</p>";
 
-    teksti = teksti + "<p>" + "<b>" + "Tekniikat" + "</b>" + "<br>"
-        + data.tekniikat + "</p>";
-
     document.getElementById("vastaus").innerHTML = teksti;
-
 
 }
 
