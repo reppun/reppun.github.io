@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Repun JSON harkka</title>
+    <title>Toteutus | Repun JSON harkka</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap-->
@@ -21,7 +21,7 @@
     <!--Navigaatiopalkki-->
     <nav class="navbar navbar-expand-lg accent1">
         <div class="container">
-            <a class="navbar-brand pacifico-regular" href="/kurssi.html">Etusivu</a>
+            <a class="navbar-brand pacifico-regular" href="#">Etusivu</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -31,6 +31,34 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="/toteutus.html">Toteutus</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tapahtumat.html">Tapahtumat</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/saa.html">Sää</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/liikennekamerat.html">Liikennekamerat</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/junat.html">Junat</a>
                     </li>
                 </ul>
             </div>
@@ -45,8 +73,7 @@
 
         <div class="row">
             <div class="col-sm-12">
-
-                <h1>Repun JSON testisivu</h1>
+                <h1>Toteutus</h1>
                 <br /><br />
             </div>
         </div>
@@ -59,24 +86,8 @@
             </div>
         </div>
 
-        <!--Sivun Page hero-->
-        <div class="row">
-            <div class="col-sm-12">
-
-                <div id="kappale1">
-                    <script>
-                        const json = '{"result":true, "count":42}';
-                        const obj = JSON.parse(oma.json);
-                        const teksti = obj.count + ' & ' + obj.result;
-
-                        document.getElementById("kappale1").innerText = teksti;
-                    </script>
-                </div>
-
-            </div>
-        </div>
-
     </div>
+
 </body>
 
 </html>
